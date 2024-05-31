@@ -1,0 +1,15 @@
+<div class="flex flex-col items-center py-5 gap-5 font-mono">
+  <div
+    class="flex justify-center group border-(2 solid gray) p-3 w-full"
+    md="w-100"
+  >
+    <div class="flex justify-center items-center size-30 text-white bg-purple group-hover-(bg-purple-900 w-60)"><h1
+      class="m-0">TEST</h1>
+    </div>
+  </div>
+  <div class="flex">
+    @for (i of list; track i) {
+      <div class="size-30 hover-(bg-black text-white)" [class]="i">{{ i }}</div>
+    }
+  </div>
+</div>

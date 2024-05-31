@@ -1,0 +1,45 @@
+{
+  "name": "angular-uno-css-cli-example",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "ng serve & watch",
+    "start-win": "start npm run ng serve && start npm run watch",
+    "watch": "node uno_utils/watcher.js",
+    "build": "ng build",
+    "prebuild": "node uno_utils/copysrc.js && unocss \"_src/**/*.{html,js,ts,jsx,tsx}\" -o _src/uno.css --write-transformed",
+    "test": "ng test",
+    "ng": "ng"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^18.0.0",
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/forms": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "@angular/platform-browser-dynamic": "^18.0.0",
+    "@angular/router": "^18.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "watcher": "^2.3.1",
+    "zone.js": "~0.14.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.0.2",
+    "@angular/cli": "^18.0.2",
+    "@angular/compiler-cli": "^18.0.0",
+    "@types/jasmine": "~5.1.0",
+    "@unocss/cli": "latest",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "~5.4.2",
+    "unocss": "^0.60.3"
+  }
+}
